@@ -1,0 +1,27 @@
+.link-to-main {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.logo-container {
+	margin-left: -5px;
+}
+
+#header {
+	position: sticky;
+	top: 0;
+	z-index: 500;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active:hover {
+	color: #fff;
+	background-color: #2c3e50;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+	color: #7b8a8b;
+	background-color: white;
+}

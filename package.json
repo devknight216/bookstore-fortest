@@ -1,0 +1,36 @@
+{
+	"name": "bookstore",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "e-commerce web application on the MERN stack ",
+	"main": "server.js",
+	"scripts": {
+		"server": "nodemon --experimental-json-modules backend/server.js",
+		"client": "npm start --prefix frontend",
+		"start": "concurrently \"npm run server\" \"npm run client\"",
+		"data:import": "node --experimental-json-modules backend/seeder.js",
+		"data:delete": "node --experimental-json-modules backend/seeder.js -d",
+		"heroku-prebuild": "npm install --prefix frontend && npm run build --prefix frontend"
+	},
+	"keywords": [
+		"mern",
+		"bookstore"
+	],
+	"author": "Chen Long",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"colors": "^1.4.0",
+		"dotenv": "^8.6.0",
+		"express": "^4.17.1",
+		"express-async-handler": "^1.1.4",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.12.5",
+		"morgan": "^1.10.0",
+		"multer": "^1.4.2"
+	},
+	"devDependencies": {
+		"concurrently": "^6.0.2",
+		"nodemon": "^2.0.7"
+	}
+}
